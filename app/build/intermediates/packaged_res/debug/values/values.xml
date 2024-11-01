@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Mapbox</string>
+    <string name="focus_location">Зосередитися на моїй локації</string>
+    <string name="mapbox_access_token">pk.eyJ1IjoicGF0cnVueXVyYSIsImEiOiJjbTJ2eDl6cmEwMG9jMmlyMmYwNW9teXVrIn0.Ujh7lRUdkG4Q_f4EiUiY6g</string>
+    <style name="Base.Theme.Mapbox" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.Mapbox" parent="Base.Theme.Mapbox"/>
+</resources>

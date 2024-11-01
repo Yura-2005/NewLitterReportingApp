@@ -7,6 +7,9 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -47,29 +50,44 @@ public class MainActivity extends AppCompatActivity {
                 addOnMapClickListener(mapView.getMapboxMap(), new OnMapClickListener() {
                     @Override
                     public boolean onMapClick(@NonNull Point point) {
-                        PointAnnotationOptions pointAnnotationOptions = new PointAnnotationOptions().withTextAnchor(TextAnchor.CENTER).withIconImage(bitmap)
-                                .withPoint(point);
-                        pointAnnotationManager.create(pointAnnotationOptions);
-
-                        pointAnnotationManager.addClickListener(new OnPointAnnotationClickListener() {
-                            @Override
-                            public boolean onAnnotationClick(@NonNull PointAnnotation pointAnnotation) {
-                                ViewAnnotationOptions options = new ViewAnnotationOptions.Builder().geometry(pointAnnotation.getPoint()).build();
-                                View viewAnnotation = viewAnnotationManager.addViewAnnotation(R.layout.test_layout, options);
-
-                                viewAnnotation.setOnClickListener(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View view) {
-                                        Toast.makeText(MainActivity.this, "View Clicked!", Toast.LENGTH_SHORT).show();
-                                    }
-                                });
-                                return false;
-                            }
-                        });
-                        return false;
+                        // Виклик методу для введення тексту
+                        showInputDialog(point, pointAnnotationManager, bitmap);
+                        return true; // Повертаємо true, щоб позначити, що подію оброблено
                     }
                 });
             }
         });
+    }
+
+    private void showInputDialog(Point point, PointAnnotationManager pointAnnotationManager, Bitmap bitmap) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Введіть текст для мітки");
+
+        // Додайте поле введення
+        final EditText input = new EditText(this);
+        builder.setView(input);
+
+        builder.setPositiveButton("Додати", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                String annotationText = input.getText().toString(); // Отримання тексту
+
+                PointAnnotationOptions pointAnnotationOptions = new PointAnnotationOptions()
+                        .withTextField(annotationText) // Додаємо текст
+                        .withTextAnchor(TextAnchor.CENTER)
+                        .withIconImage(bitmap)
+                        .withPoint(point);
+
+                pointAnnotationManager.create(pointAnnotationOptions);
+            }
+        });
+        builder.setNegativeButton("Скасувати", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        builder.show();
     }
 }
