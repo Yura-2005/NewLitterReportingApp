@@ -1,5 +1,7 @@
 package com.example.mapbox;
 
+import com.example.mapbox.database.AppDatabase;
+
 import static com.mapbox.maps.plugin.gestures.GesturesUtils.addOnMapClickListener;
 import static com.mapbox.maps.plugin.gestures.GesturesUtils.getGestures;
 import static com.mapbox.maps.plugin.locationcomponent.LocationComponentUtils.getLocationComponent;
@@ -41,10 +43,15 @@ import com.mapbox.maps.plugin.locationcomponent.LocationComponentPlugin;
 import com.mapbox.maps.plugin.locationcomponent.OnIndicatorBearingChangedListener;
 import com.mapbox.maps.plugin.locationcomponent.OnIndicatorPositionChangedListener;
 
+import android.database.Cursor;
+import android.util.Log;
+
+
 public class MainActivity extends AppCompatActivity {
     private MapView mapView;
     private FloatingActionButton floatingActionButton;
     private PointAnnotationManager pointAnnotationManager;
+    private AppDatabase appDatabase; // Ініціалізація бази даних
 
     private final ActivityResultLauncher<String> activityResultLauncher = registerForActivityResult(new ActivityResultContracts.RequestPermission(), new ActivityResultCallback<Boolean>() {
         @Override
@@ -86,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onMoveEnd(@NonNull MoveGestureDetector moveGestureDetector) {
-
+            // Порожній метод для завершення переміщення
         }
     };
 
@@ -94,6 +101,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Ініціалізація бази даних
+        appDatabase = AppDatabase.getInstance(this);
 
         mapView = findViewById(R.id.mapView);
         floatingActionButton = findViewById(R.id.focusLocation);
@@ -103,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         floatingActionButton.hide();
-        mapView.getMapboxMap().loadStyleUri(Style.SATELLITE, new Style.OnStyleLoaded() {
+        mapView.getMapboxMap().loadStyleUri(Style.MAPBOX_STREETS, new Style.OnStyleLoaded() {
             @Override
             public void onStyleLoaded(@NonNull Style style) {
                 LocationComponentPlugin locationComponentPlugin = getLocationComponent(mapView);
@@ -137,15 +147,54 @@ public class MainActivity extends AppCompatActivity {
                         floatingActionButton.hide();
                     }
                 });
+
+                loadAnnotations();
             }
         });
     }
+
+    private void loadAnnotations() {
+        Cursor cursor = appDatabase.getData(); // Отримуємо курсор з даними з бази даних
+        if (cursor != null) {
+            while (cursor.moveToNext()) {
+                int latitudeIndex = cursor.getColumnIndex(AppDatabase.COLUMN_LATITUDE);
+                int longitudeIndex = cursor.getColumnIndex(AppDatabase.COLUMN_LONGITUDE);
+                int textIndex = cursor.getColumnIndex(AppDatabase.COLUMN_TEXT);
+
+                // Перевіряємо, що індекси знайдені
+                if (latitudeIndex != -1 && longitudeIndex != -1 && textIndex != -1) {
+                    double latitude = cursor.getDouble(latitudeIndex);
+                    double longitude = cursor.getDouble(longitudeIndex);
+                    String annotationText = cursor.getString(textIndex);
+
+                    // Додаємо мітку на карту
+                    Point point = Point.fromLngLat(longitude, latitude);
+                    Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.location_pin);
+
+                    if (bitmap != null) { // Переконайтесь, що bitmap завантажений
+                        PointAnnotationOptions pointAnnotationOptions = new PointAnnotationOptions()
+                                .withTextField(annotationText)
+                                .withTextAnchor(TextAnchor.CENTER)
+                                .withIconImage(bitmap)
+                                .withPoint(point);
+
+                        pointAnnotationManager.create(pointAnnotationOptions); // Додаємо мітку на карту
+                    } else {
+                        Log.e("Bitmap Error", "Bitmap for location pin is null");
+                    }
+                } else {
+                    Log.e("Cursor Error", "One or more columns not found in the cursor");
+                }
+            }
+            cursor.close(); // Закриваємо курсор
+        }
+    }
+
 
     private void showInputDialog(Point point) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Введіть текст для мітки");
 
-        // Додайте поле введення
         final EditText input = new EditText(this);
         builder.setView(input);
 
@@ -162,8 +211,12 @@ public class MainActivity extends AppCompatActivity {
                         .withPoint(point);
 
                 pointAnnotationManager.create(pointAnnotationOptions);
+
+                // Збереження координат та тексту в базу даних
+                appDatabase.insertData(point.latitude(), point.longitude(), annotationText);
             }
         });
+
         builder.setNegativeButton("Скасувати", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
