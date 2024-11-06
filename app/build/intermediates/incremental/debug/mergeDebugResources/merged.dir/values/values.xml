@@ -622,7 +622,11 @@
     </attr>
     <bool name="abc_action_bar_embed_tabs">true</bool>
     <bool name="abc_config_actionMenuItemAllCaps">true</bool>
+    <bool name="enable_system_alarm_service_default">true</bool>
+    <bool name="enable_system_foreground_service_default">true</bool>
+    <bool name="enable_system_job_service_default">false</bool>
     <bool name="mtrl_btn_textappearance_all_caps">true</bool>
+    <bool name="workmanager_test_configuration">false</bool>
     <color name="abc_decor_view_status_guard">#ff000000</color>
     <color name="abc_decor_view_status_guard_light">#ffffffff</color>
     <color name="abc_search_url_text_normal">#7fa87f</color>
@@ -649,6 +653,18 @@
     <color name="cardview_light_background">#FFFFFFFF</color>
     <color name="cardview_shadow_end_color">#03000000</color>
     <color name="cardview_shadow_start_color">#37000000</color>
+    <color name="colorError">#F44336</color>
+    <color name="colorOnError">#FFFFFF</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnPrimaryVariant">#FFFFFF</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorOnSecondaryVariant">#E6FFFFFF</color>
+    <color name="colorOnSurface">#3C3E3E</color>
+    <color name="colorPrimary">#212121</color>
+    <color name="colorPrimaryVariant">#000000</color>
+    <color name="colorSecondary">#37516F</color>
+    <color name="colorSecondaryVariant">#2D3F53</color>
+    <color name="colorSurface">#FFFFFF</color>
     <color name="design_bottom_navigation_shadow_color">#14000000</color>
     <color name="design_dark_default_color_background">#121212</color>
     <color name="design_dark_default_color_error">#CF6679</color>
@@ -866,10 +882,41 @@
     <color name="m3_sys_color_tertiary_fixed">@color/m3_ref_palette_tertiary90</color>
     <color name="m3_sys_color_tertiary_fixed_dim">@color/m3_ref_palette_tertiary80</color>
     <color name="mapbox_blue">#1E8CAB</color>
+    <color name="mapbox_current_speed_color">#BE3C30</color>
+    <color name="mapbox_exit_background_border_color">@color/colorOnSurface</color>
+    <color name="mapbox_exit_background_color">@color/colorSurface</color>
+    <color name="mapbox_exit_drawable_color">@color/colorOnSurface</color>
+    <color name="mapbox_exit_text_color">@color/colorOnSurface</color>
     <color name="mapbox_gray">#7D7F80</color>
     <color name="mapbox_gray_dark">#5F5F5F</color>
     <color name="mapbox_location_layer_blue">#4A90E2</color>
     <color name="mapbox_location_layer_gray">#A1B0C0</color>
+    <color name="mapbox_main_maneuver_background_color">@color/colorSecondary</color>
+    <color name="mapbox_mute_unmute_drawable_color">@color/colorOnSurface</color>
+    <color name="mapbox_notification_blue">#2D4E73</color>
+    <color name="mapbox_notification_turn_icon_color">#FFFFFF</color>
+    <color name="mapbox_notification_turn_icon_shadow_color">#A8A8A8</color>
+    <color name="mapbox_primary_maneuver_text_color">@color/colorOnSecondary</color>
+    <color name="mapbox_recenter_drawable_color">@color/colorOnSurface</color>
+    <color name="mapbox_route_overview_drawable_color">@color/colorOnSurface</color>
+    <color name="mapbox_secondary_maneuver_text_color">@color/colorOnSecondary</color>
+    <color name="mapbox_speed_info_background_color">@android:color/white</color>
+    <color name="mapbox_speed_info_border_color">#CDD0D0</color>
+    <color name="mapbox_speed_limit_text_color">@color/colorOnSurface</color>
+    <color name="mapbox_speed_limit_view_background">@color/colorSurface</color>
+    <color name="mapbox_speed_limit_view_mutcd_border">@android:color/black</color>
+    <color name="mapbox_speed_limit_view_vienna_border">#BE3C30</color>
+    <color name="mapbox_status_view_background">@color/colorSurface</color>
+    <color name="mapbox_status_view_foreground">@color/colorOnSurface</color>
+    <color name="mapbox_step_distance_text_color">@color/colorOnSecondary</color>
+    <color name="mapbox_sub_maneuver_background_color">@color/colorSecondaryVariant</color>
+    <color name="mapbox_sub_maneuver_text_color">@color/colorOnSecondaryVariant</color>
+    <color name="mapbox_trip_progress_divider_color">#666666</color>
+    <color name="mapbox_trip_progress_text_color">@color/colorOnSurface</color>
+    <color name="mapbox_trip_progress_view_background_color">@color/colorSurface</color>
+    <color name="mapbox_turn_icon_color">@color/colorOnSecondary</color>
+    <color name="mapbox_turn_icon_shadow_color">#A8A8A8</color>
+    <color name="mapbox_upcoming_maneuver_background_color">@color/colorSecondaryVariant</color>
     <color name="material_blue_grey_800">#ff37474f</color>
     <color name="material_blue_grey_900">#ff263238</color>
     <color name="material_blue_grey_950">#ff21272b</color>
@@ -1480,10 +1527,18 @@
     <dimen name="m3_timepicker_window_elevation">@dimen/m3_comp_time_picker_container_elevation</dimen>
     <dimen name="m3_toolbar_text_size_title">20dp</dimen>
     <dimen name="mapbox_angular_velocity_multiplier">1.3dp</dimen>
+    <dimen name="mapbox_audioGuidanceButton_paddingStart">20dp</dimen>
+    <dimen name="mapbox_button_size">56dp</dimen>
+    <dimen name="mapbox_button_text_regular">14sp</dimen>
     <dimen name="mapbox_defaultMultiTapMovementThreshold">5dp</dimen>
     <dimen name="mapbox_defaultScaleSpanSinceStartThreshold">7dp</dimen>
     <dimen name="mapbox_defaultShovePixelThreshold">16dp</dimen>
     <dimen name="mapbox_density_constant">0.29dp</dimen>
+    <dimen name="mapbox_extendableButton_iconSize">32dp</dimen>
+    <dimen name="mapbox_extendableButton_minHeight">52dp</dimen>
+    <dimen name="mapbox_extendableButton_minWidth">72dp</dimen>
+    <dimen name="mapbox_extendableButton_paddingStart">10dp</dimen>
+    <dimen name="mapbox_extendableButton_spacing">8dp</dimen>
     <dimen name="mapbox_internalMinSpan23">10mm</dimen>
     <dimen name="mapbox_internalMinSpan24">6mm</dimen>
     <dimen name="mapbox_locationComponentTrackingInitialMoveThreshold">25dp</dimen>
@@ -1494,6 +1549,47 @@
     <dimen name="mapbox_minimum_scale_speed">0.6dp</dimen>
     <dimen name="mapbox_minimum_scale_velocity">225dp</dimen>
     <dimen name="mapbox_my_locationview_outer_circle">18dp</dimen>
+    <dimen name="mapbox_navigationCamera_trackingInitialMoveThreshold">25dp</dimen>
+    <dimen name="mapbox_navigationCamera_trackingMultiFingerMoveThreshold">400dp</dimen>
+    <dimen name="mapbox_notification_maneuver_image_height">48dp</dimen>
+    <dimen name="mapbox_notification_maneuver_image_width">48dp</dimen>
+    <dimen name="mapbox_notification_padding">8dp</dimen>
+    <dimen name="mapbox_recenterButton_minExtendedWidth">150dp</dimen>
+    <dimen name="mapbox_routeOverviewButton_minExtendedWidth">165dp</dimen>
+    <dimen name="mapbox_search_sdk_button_corner_padding">14dp</dimen>
+    <dimen name="mapbox_search_sdk_button_corner_radius">5dp</dimen>
+    <dimen name="mapbox_search_sdk_button_extra_tap_area_edge_offset">6dp</dimen>
+    <dimen name="mapbox_search_sdk_button_height_normal">50dp</dimen>
+    <dimen name="mapbox_search_sdk_button_height_small">26dp</dimen>
+    <dimen name="mapbox_search_sdk_dimen_1x">4dp</dimen>
+    <dimen name="mapbox_search_sdk_dimen_2x">8dp</dimen>
+    <dimen name="mapbox_search_sdk_dimen_3x">12dp</dimen>
+    <dimen name="mapbox_search_sdk_dimen_4x">16dp</dimen>
+    <dimen name="mapbox_search_sdk_dimen_5x">20dp</dimen>
+    <dimen name="mapbox_search_sdk_dimen_6x">24dp</dimen>
+    <dimen name="mapbox_search_sdk_dimen_7x">28dp</dimen>
+    <dimen name="mapbox_search_sdk_dimen_8x">32dp</dimen>
+    <dimen name="mapbox_search_sdk_divider_height">1dp</dimen>
+    <dimen name="mapbox_search_sdk_extra_touch_area">12dp</dimen>
+    <dimen name="mapbox_search_sdk_list_complex_item_top_margin">14dp</dimen>
+    <dimen name="mapbox_search_sdk_list_item_height_complex_item">68dp</dimen>
+    <dimen name="mapbox_search_sdk_list_item_icon_horizontal_margin">10dp</dimen>
+    <dimen name="mapbox_search_sdk_list_item_start_padding_with_start_icon_margin">32dp</dimen>
+    <dimen name="mapbox_search_sdk_primary_layout_offset">22dp</dimen>
+    <dimen name="mapbox_search_sdk_search_history_item_name_margin_top">12dp</dimen>
+    <dimen name="mapbox_search_sdk_search_view_background_radius">8dp</dimen>
+    <dimen name="mapbox_search_sdk_search_view_margin_horizontal">16dp</dimen>
+    <dimen name="mapbox_search_sdk_search_view_margin_top">16dp</dimen>
+    <dimen name="mapbox_search_sdk_search_view_max_width">380dp</dimen>
+    <dimen name="mapbox_search_sdk_text_normal_min_height">22dp</dimen>
+    <dimen name="mapbox_search_sdk_text_size_normal">15sp</dimen>
+    <dimen name="mapbox_search_sdk_text_size_small">13sp</dimen>
+    <dimen name="mapbox_search_sdk_text_size_tiny">11sp</dimen>
+    <dimen name="mapbox_search_sdk_text_small_min_height">22dp</dimen>
+    <dimen name="mapbox_soundButton_minExtendedWidth">165dp</dimen>
+    <dimen name="mapbox_statusView_padding_h">10dp</dimen>
+    <dimen name="mapbox_statusView_padding_v">2dp</dimen>
+    <dimen name="mapbox_statusView_spacing">5dp</dimen>
     <dimen name="material_bottom_sheet_max_width">640dp</dimen>
     <dimen name="material_clock_display_height">80dp</dimen>
     <dimen name="material_clock_display_padding">24dp</dimen>
@@ -1798,7 +1894,9 @@
     <item name="item_touch_helper_previous_elevation" type="id"/>
     <item name="line1" type="id"/>
     <item name="line3" type="id"/>
+    <item name="main_screen_view" type="id"/>
     <item name="mapView" type="id"/>
+    <item name="mapbox_sdk_button_text_view" type="id"/>
     <item name="material_clock_face" type="id"/>
     <item name="material_clock_level" type="id"/>
     <item name="material_value_index" type="id"/>
@@ -1821,6 +1919,8 @@
     <item name="row_index_key" type="id"/>
     <item name="save_non_transition_alpha" type="id"/>
     <item name="save_overlay_view" type="id"/>
+    <item name="search_tab_category_recycler" type="id"/>
+    <item name="search_tab_favorites_recycler" type="id"/>
     <item name="selection_type" type="id"/>
     <item name="snackbar_action" type="id"/>
     <item name="snackbar_text" type="id"/>
@@ -1929,6 +2029,10 @@
     <integer name="mtrl_view_visible">0</integer>
     <integer name="show_password_duration">200</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
+    <plurals name="mapbox_number_of_days" ns1:ignore="MissingTranslation">
+        <item quantity="one">day</item>
+        <item quantity="other">days</item>
+    </plurals>
     <plurals description="Plural form content description for number of new notifications [CHAR_LIMIT=NONE]" name="mtrl_badge_content_description">
     <item quantity="one"><ns2:g id="count">%d</ns2:g> new notification</item>
     <item quantity="other"><ns2:g id="count">%d</ns2:g> new notifications</item>
@@ -1999,7 +2103,7 @@
     <string name="m3_sys_motion_easing_standard" translatable="false">cubic-bezier(0.2, 0, 0, 1)</string>
     <string name="m3_sys_motion_easing_standard_accelerate" translatable="false">cubic-bezier(0.3, 0, 1, 1)</string>
     <string name="m3_sys_motion_easing_standard_decelerate" translatable="false">cubic-bezier(0, 0, 0, 1)</string>
-    <string name="mapbox_access_token">pk.eyJ1IjoicGF0cnVueXVyYSIsImEiOiJjbTJ2eDl6cmEwMG9jMmlyMmYwNW9teXVrIn0.Ujh7lRUdkG4Q_f4EiUiY6g</string>
+    <string name="mapbox_access_token">sk.eyJ1Ijoic2FzaGEyMDA1IiwiYSI6ImNtMzM3eDNtYTE5NjIyanM4N29leWdoZ3gifQ.ApBvTqYTRfeELaHYP3C5ew</string>
     <string name="mapbox_attributionErrorNoBrowser">No web browser installed on device, can\'t open web page.</string>
     <string name="mapbox_attributionTelemetryMessage">You are helping to make OpenStreetMap and Mapbox maps better by contributing anonymous usage data.</string>
     <string name="mapbox_attributionTelemetryNegative">Disagree</string>
@@ -2008,10 +2112,84 @@
     <string name="mapbox_attributionTelemetryTitle">Make Mapbox Maps Better</string>
     <string name="mapbox_attributionsDialogTitle">Powered by Mapbox Maps</string>
     <string name="mapbox_compassContentDescription">Map compass. Activate to reset the map rotation to North.</string>
+    <string name="mapbox_end_navigation">End Navigation</string>
+    <string name="mapbox_eta_format" ns1:ignore="MissingTranslation">%s ETA</string>
+    <string name="mapbox_free_drive_session" ns1:ignore="MissingTranslation">Free Drive Session</string>
+    <string name="mapbox_muted">Muted</string>
     <string name="mapbox_myLocationViewContentDescription">Location View. This shows your location on the map.</string>
+    <string name="mapbox_navigation_is_starting" ns1:ignore="MissingTranslation">Navigation is starting…</string>
+    <string name="mapbox_privacy_policy">Mapbox Privacy Policy</string>
+    <string name="mapbox_recenter" ns1:ignore="MissingTranslation">Recenter</string>
+    <string name="mapbox_route_follow" ns1:ignore="MissingTranslation">Following</string>
+    <string name="mapbox_route_overview" ns1:ignore="MissingTranslation">Overview</string>
+    <string name="mapbox_search_sdk_category_name_atm">ATM</string>
+    <string name="mapbox_search_sdk_category_name_auto_repair_mechanic">Auto repair/mechanic</string>
+    <string name="mapbox_search_sdk_category_name_bars">Bars</string>
+    <string name="mapbox_search_sdk_category_name_bus_station">Bus station</string>
+    <string name="mapbox_search_sdk_category_name_clothing_shoes">Clothing/shoes</string>
+    <string name="mapbox_search_sdk_category_name_coffee_shop_cafe">Cafe</string>
+    <string name="mapbox_search_sdk_category_name_emergency_room">ER</string>
+    <string name="mapbox_search_sdk_category_name_ev_charging_station">Charging Station</string>
+    <string name="mapbox_search_sdk_category_name_gas_station">Gas</string>
+    <string name="mapbox_search_sdk_category_name_gym_fitness">Gym</string>
+    <string name="mapbox_search_sdk_category_name_hospital">Hospital</string>
+    <string name="mapbox_search_sdk_category_name_hotel">Hotel</string>
+    <string name="mapbox_search_sdk_category_name_movie_theaters">Movie Theaters</string>
+    <string name="mapbox_search_sdk_category_name_museums">Museums</string>
+    <string name="mapbox_search_sdk_category_name_night_clubs">Night clubs</string>
+    <string name="mapbox_search_sdk_category_name_parking">Parking</string>
+    <string name="mapbox_search_sdk_category_name_parks">Parks</string>
+    <string name="mapbox_search_sdk_category_name_pharmacy">Pharmacy</string>
+    <string name="mapbox_search_sdk_category_name_restaurants">Restaurants</string>
+    <string name="mapbox_search_sdk_category_name_shopping_malls">Shopping malls</string>
+    <string name="mapbox_search_sdk_category_name_supermarket_grocery">Supermarket/Grocery</string>
+    <string name="mapbox_search_sdk_category_name_train_station">Train station</string>
+    <string name="mapbox_search_sdk_distance_feet">%1$s ft</string>
+    <string name="mapbox_search_sdk_distance_km">%1$s km</string>
+    <string name="mapbox_search_sdk_distance_meters">%1$s m</string>
+    <string name="mapbox_search_sdk_distance_miles">%1$s mi</string>
+    <string name="mapbox_search_sdk_no_internet_connection_retry_button">Tap to retry</string>
+    <string name="mapbox_search_sdk_no_internet_connection_subtitle">You’re offline. Try to reconnect.</string>
+    <string name="mapbox_search_sdk_no_internet_connection_title">No internet connection</string>
+    <string name="mapbox_search_sdk_place_card_add_to_favorites">Add to favorites</string>
+    <string name="mapbox_search_sdk_place_card_added_to_favorites">Added to favorites</string>
+    <string name="mapbox_search_sdk_place_card_navigate">Navigate</string>
+    <string name="mapbox_search_sdk_place_card_send_feedback">Report an issue</string>
+    <string name="mapbox_search_sdk_place_card_share">Share</string>
+    <string name="mapbox_search_sdk_search_result_missing_feedback">Missing result?</string>
+    <string name="mapbox_search_sdk_search_result_type_address">Address</string>
+    <string name="mapbox_search_sdk_search_result_type_block">Block</string>
+    <string name="mapbox_search_sdk_search_result_type_country">Country</string>
+    <string name="mapbox_search_sdk_search_result_type_district">District</string>
+    <string name="mapbox_search_sdk_search_result_type_favorite">Favorite</string>
+    <string name="mapbox_search_sdk_search_result_type_history">History</string>
+    <string name="mapbox_search_sdk_search_result_type_locality">Locality</string>
+    <string name="mapbox_search_sdk_search_result_type_neighborhood">Neighborhood</string>
+    <string name="mapbox_search_sdk_search_result_type_place">Place</string>
+    <string name="mapbox_search_sdk_search_result_type_poi">POI</string>
+    <string name="mapbox_search_sdk_search_result_type_postcode">Postcode</string>
+    <string name="mapbox_search_sdk_search_result_type_region">Region</string>
+    <string name="mapbox_search_sdk_search_result_type_street">Street</string>
+    <string name="mapbox_search_sdk_search_result_view_empty_recent_searches">Recent searches</string>
+    <string name="mapbox_search_sdk_search_result_view_no_results">No suggestions found</string>
+    <string name="mapbox_search_sdk_search_result_view_recent_searches_title">Recent searches</string>
+    <string name="mapbox_search_sdk_server_error_subtitle">Something went wrong.</string>
+    <string name="mapbox_search_sdk_server_error_title">Server error</string>
+    <string name="mapbox_search_sdk_unknown_error_subtitle">Something went wrong.</string>
+    <string name="mapbox_search_sdk_unknown_error_title">Error</string>
+    <string name="mapbox_stop_session" ns1:ignore="MissingTranslation">Stop session</string>
     <string name="mapbox_telemetryImproveMap">Improve This Map</string>
     <string name="mapbox_telemetryLink" translatable="false">https://www.mapbox.com/telemetry/</string>
     <string name="mapbox_telemetrySettings">Telemetry Settings</string>
+    <string name="mapbox_trip_progress_text_divider_landscape" translatable="false"> \u2022</string>
+    <string name="mapbox_unit_feet" ns1:ignore="MissingTranslation">ft</string>
+    <string name="mapbox_unit_hr" ns1:ignore="MissingTranslation">hr</string>
+    <string name="mapbox_unit_kilometers">km</string>
+    <string name="mapbox_unit_meters">m</string>
+    <string name="mapbox_unit_miles">mi</string>
+    <string name="mapbox_unit_min" ns1:ignore="MissingTranslation">min</string>
+    <string name="mapbox_unit_yards" ns1:ignore="MissingTranslation">yd</string>
+    <string name="mapbox_unmuted">Unmuted</string>
     <string name="mapbox_warning_attribution_disabled">Attribution must be enabled if you use data from sources that require it. See https://docs.mapbox.com/help/getting-started/attribution/ for more details.</string>
     <string name="mapbox_warning_logo_disabled" translatable="false">The Mapbox logo wordmark must remain enabled in accordance with our Terms of Service. See https://www.mapbox.com/legal/tos for more details.</string>
     <string name="material_clock_display_divider" translatable="false">:</string>
@@ -2036,6 +2214,8 @@
     <string description="Suffix for time in 12-hour standard, after noon. [CHAR_LIMIT=2]" name="material_timepicker_pm">PM</string>
     <string description="Title for the dialog with a time picker. [CHAR_LIMIT=32]" name="material_timepicker_select_time">Select time</string>
     <string name="material_timepicker_text_input_mode_description">Switch to text input mode for the time input.</string>
+    <string name="max_speed">MAX\n%1$d</string>
+    <string name="max_speed_no_value" ns1:ignore="TypographyDashes">MAX\n--</string>
     <string description="Content description for new notification (no number count) [CHAR_LIMIT=NONE]" name="mtrl_badge_numberless_content_description">New notification</string>
     <string name="mtrl_checkbox_button_icon_path_checked" translatable="false">M14,18.2 11.4,15.6 10,17 14,21 22,13 20.6,11.6z</string>
     <string name="mtrl_checkbox_button_icon_path_group_name" translatable="false">icon</string>
@@ -5490,6 +5670,375 @@
     <style name="CardView.Light">
         <item name="cardBackgroundColor">@color/cardview_light_background</item>
     </style>
+    <style name="MapboxAudioGuidanceButtonTextAppearance">
+        <item name="android:textColor">@color/colorOnSurface</item>
+        <item name="android:textSize">@dimen/mapbox_button_text_regular</item>
+    </style>
+    <style name="MapboxCameraModeButtonTextAppearance">
+        <item name="android:textColor">@color/colorOnSurface</item>
+        <item name="android:textSize">@dimen/mapbox_button_text_regular</item>
+    </style>
+    <style name="MapboxExtendableButtonTextAppearance">
+        <item name="android:textColor">@color/colorOnSurface</item>
+        <item name="android:textSize">@dimen/mapbox_button_text_regular</item>
+    </style>
+    <style name="MapboxRoadNameViewTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorOnSurface</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="MapboxSearchSdk.Button.Base" parent="@style/MapboxSearchSdk.Text.RobotoBold">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:stateListAnimator" ns1:targetApi="lollipop">@null</item>
+    </style>
+    <style name="MapboxSearchSdk.Button.Primary.Base" parent="@style/MapboxSearchSdk.Button.Base">
+        <item name="android:textColor">?attr/mapboxSearchSdkOnPrimaryAccentColor</item>
+        <item name="drawableTintCompat">?attr/mapboxSearchSdkOnPrimaryAccentColor</item>
+        <item name="android:background">@drawable/mapbox_search_sdk_primary_button_background</item>
+    </style>
+    <style name="MapboxSearchSdk.Button.Primary.Normal" parent="@style/MapboxSearchSdk.Button.Primary.Base">
+        <item name="android:textSize">@dimen/mapbox_search_sdk_text_size_small</item>
+        <item name="android:minHeight">@dimen/mapbox_search_sdk_button_height_normal</item>
+        <item name="android:paddingLeft">@dimen/mapbox_search_sdk_button_corner_padding</item>
+        <item name="android:paddingRight">@dimen/mapbox_search_sdk_button_corner_padding</item>
+    </style>
+    <style name="MapboxSearchSdk.Button.Primary.Small" parent="@style/MapboxSearchSdk.Button.Primary.Base">
+        <item name="android:textSize">@dimen/mapbox_search_sdk_text_size_tiny</item>
+        <item name="android:minHeight">@dimen/mapbox_search_sdk_button_height_small</item>
+        <item name="android:paddingLeft">@dimen/mapbox_search_sdk_button_corner_padding</item>
+        <item name="android:paddingRight">@dimen/mapbox_search_sdk_button_corner_padding</item>
+    </style>
+    <style name="MapboxSearchSdk.Button.Secondary.Base" parent="@style/MapboxSearchSdk.Button.Base">
+        <item name="android:textColor">?attr/mapboxSearchSdkPrimaryAccentColor</item>
+        <item name="drawableTintCompat">?attr/mapboxSearchSdkPrimaryAccentColor</item>
+    </style>
+    <style name="MapboxSearchSdk.Button.Secondary.Normal" parent="@style/MapboxSearchSdk.Button.Secondary.Base">
+        <item name="android:textSize">@dimen/mapbox_search_sdk_text_size_small</item>
+        <item name="android:minHeight">@dimen/mapbox_search_sdk_button_height_normal</item>
+        <item name="android:paddingLeft">@dimen/mapbox_search_sdk_button_corner_padding</item>
+        <item name="android:paddingRight">@dimen/mapbox_search_sdk_button_corner_padding</item>
+    </style>
+    <style name="MapboxSearchSdk.Text.Address" parent="MapboxSearchSdk.Text.RobotoRegular">
+        <item name="android:textColor">?attr/mapboxSearchSdkPrimaryTextInactiveColor</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/mapbox_search_sdk_text_size_small</item>
+        <item name="android:minHeight">@dimen/mapbox_search_sdk_text_small_min_height</item>
+        <item name="android:gravity">start|center_vertical</item>
+    </style>
+    <style name="MapboxSearchSdk.Text.Base" parent="">
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+    <style name="MapboxSearchSdk.Text.BoldHeader" parent="MapboxSearchSdk.Text.RobotoBold">
+        <item name="android:textColor">?attr/mapboxSearchSdkPrimaryTextInactiveColor</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/mapbox_search_sdk_text_size_tiny</item>
+    </style>
+    <style name="MapboxSearchSdk.Text.BoldHeader.Big" parent="MapboxSearchSdk.Text.BoldHeader">
+        <item name="android:textSize">@dimen/mapbox_search_sdk_text_size_small</item>
+        <item name="android:minHeight">@dimen/mapbox_search_sdk_text_small_min_height</item>
+        <item name="android:gravity">start|center_vertical</item>
+    </style>
+    <style name="MapboxSearchSdk.Text.CategoryHeader" parent="MapboxSearchSdk.Text.RobotoBold">
+        <item name="android:textSize">@dimen/mapbox_search_sdk_text_size_normal</item>
+        <item name="android:textColor">?attr/mapboxSearchSdkPrimaryAccentColor</item>
+    </style>
+    <style name="MapboxSearchSdk.Text.Distance" parent="MapboxSearchSdk.Text.RobotoRegular">
+        <item name="android:textColor">?attr/mapboxSearchSdkDistanceColor</item>
+        <item name="android:textSize">@dimen/mapbox_search_sdk_text_size_small</item>
+        <item name="android:minHeight">@dimen/mapbox_search_sdk_text_small_min_height</item>
+        <item name="android:gravity">start|center_vertical</item>
+    </style>
+    <style name="MapboxSearchSdk.Text.Primary" parent="MapboxSearchSdk.Text.RobotoMedium">
+        <item name="android:textColor">?attr/mapboxSearchSdkPrimaryTextColor</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/mapbox_search_sdk_text_size_normal</item>
+        <item name="android:minHeight">@dimen/mapbox_search_sdk_text_normal_min_height</item>
+        <item name="android:gravity">start|center_vertical</item>
+    </style>
+    <style name="MapboxSearchSdk.Text.RobotoBold" parent="MapboxSearchSdk.Text.Base">
+        <item name="android:fontFamily">sans-serif-regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="MapboxSearchSdk.Text.RobotoMedium" parent="MapboxSearchSdk.Text.Base">
+        <item name="fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="MapboxSearchSdk.Text.RobotoRegular" parent="MapboxSearchSdk.Text.Base">
+        <item name="fontFamily">sans-serif</item>
+    </style>
+    <style name="MapboxSearchSdk.Text.Secondary" parent="MapboxSearchSdk.Text.RobotoMedium">
+        <item name="android:textColor">?attr/mapboxSearchSdkPrimaryTextInactiveColor</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/mapbox_search_sdk_text_size_small</item>
+        <item name="android:minHeight">@dimen/mapbox_search_sdk_text_small_min_height</item>
+        <item name="android:gravity">start|center_vertical</item>
+    </style>
+    <style name="MapboxSearchSdk.Theme.Auto" parent="MapboxSearchSdk.Theme.Light"/>
+    <style name="MapboxSearchSdk.Theme.Dark" parent="">
+        <item name="mapboxSearchSdkPrimaryTextColor">#FFFFFF</item>
+        <item name="mapboxSearchSdkPrimaryTextInactiveColor">#898A8D</item>
+        <item name="mapboxSearchSdkPrimaryAccentColor">#0A84FF</item>
+        <item name="mapboxSearchSdkOnPrimaryAccentColor">#FFFFFF</item>
+        <item name="mapboxSearchSdkDistanceColor">#9FB3C6</item>
+        <item name="mapboxSearchSdkIconTintColor">#FFFFFF</item>
+        <item name="mapboxSearchSdkBackgroundColor">#454545</item>
+        <item name="mapboxSearchSdkBackgroundSecondaryColor">#545454</item>
+        <item name="mapboxSearchSdkPopulateArrowColor">#656565</item>
+        <item name="mapboxSearchSdkProgressColor">#0A84FF</item>
+        <item name="mapboxSearchSdkErrorIconColor">#E5E5E5</item>
+    </style>
+    <style name="MapboxSearchSdk.Theme.Light" parent="">
+        <item name="mapboxSearchSdkPrimaryTextColor">#343434</item>
+        <item name="mapboxSearchSdkPrimaryTextInactiveColor">#BCBCBF</item>
+        <item name="mapboxSearchSdkPrimaryAccentColor">#007AFF</item>
+        <item name="mapboxSearchSdkOnPrimaryAccentColor">#FFFFFF</item>
+        <item name="mapboxSearchSdkDistanceColor">#9FB3C6</item>
+        <item name="mapboxSearchSdkIconTintColor">#343434</item>
+        <item name="mapboxSearchSdkBackgroundColor">#FFFFFF</item>
+        <item name="mapboxSearchSdkBackgroundSecondaryColor">#F0F0F1</item>
+        <item name="mapboxSearchSdkPopulateArrowColor">#B2D7FF</item>
+        <item name="mapboxSearchSdkProgressColor">#007AFF</item>
+        <item name="mapboxSearchSdkErrorIconColor">#E5E5E5</item>
+    </style>
+    <style name="MapboxSpeedInfoCurrentSpeedMutcdStyle">
+        <item name="android:textSize">32dp</item>
+        <item name="android:textColor">@color/mapbox_current_speed_color</item>
+    </style>
+    <style name="MapboxSpeedInfoCurrentSpeedViennaStyle">
+        <item name="android:textSize">32dp</item>
+        <item name="android:textColor">@color/mapbox_current_speed_color</item>
+    </style>
+    <style name="MapboxSpeedInfoMutcdLegendStyle">
+        <item name="textAllCaps">true</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <style name="MapboxSpeedInfoMutcdUnitStyle">
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <style name="MapboxSpeedInfoPostedSpeedMutcdStyle">
+        <item name="android:textSize">32dp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <style name="MapboxSpeedInfoPostedSpeedViennaStyle">
+        <item name="android:textSize">32dp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <style name="MapboxStyleAudioGuidanceButton">
+        <item name="android:minHeight">52dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:elevation">0dp</item>
+        <item name="audioGuidanceButtonBackground">@drawable/mapbox_bg_button</item>
+        <item name="audioGuidanceButtonIconTint">@color/colorOnSurface</item>
+        <item name="audioGuidanceButtonMuteIcon">@drawable/mapbox_ic_sound_off</item>
+        <item name="audioGuidanceButtonUnmuteIcon">@drawable/mapbox_ic_sound_on</item>
+        <item name="audioGuidanceButtonTextAppearance">
+            @style/MapboxAudioGuidanceButtonTextAppearance
+        </item>
+        <item name="audioGuidanceButtonMuteText">@string/mapbox_muted</item>
+        <item name="audioGuidanceButtonUnmuteText">@string/mapbox_unmuted</item>
+    </style>
+    <style name="MapboxStyleAudioGuidanceButton.Circle" parent="MapboxStyleAudioGuidanceButton.Square">
+        <item name="audioGuidanceButtonBackground">@drawable/mapbox_bg_circle_outline</item>
+    </style>
+    <style name="MapboxStyleAudioGuidanceButton.Oval" parent="MapboxStyleAudioGuidanceButton">
+        <item name="audioGuidanceButtonBackground">@drawable/mapbox_bg_circle_outline</item>
+    </style>
+    <style name="MapboxStyleAudioGuidanceButton.Square" parent="MapboxStyleAudioGuidanceButton">
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:minHeight">0dp</item>
+    </style>
+    <style name="MapboxStyleCameraModeButton">
+        <item name="android:elevation">0dp</item>
+        <item name="android:minHeight">@dimen/mapbox_extendableButton_minHeight</item>
+        <item name="android:paddingStart">@dimen/mapbox_extendableButton_paddingStart</item>
+        <item name="android:paddingEnd">@dimen/mapbox_extendableButton_paddingStart</item>
+        <item name="cameraModeButtonBackground">@drawable/mapbox_bg_button</item>
+        <item name="cameraModeButtonIconTint">@color/colorOnSurface</item>
+        <item name="cameraModeButtonFollowIcon">@drawable/mapbox_ic_camera_follow</item>
+        <item name="cameraModeButtonOverviewIcon">@drawable/mapbox_ic_camera_overview</item>
+        <item name="cameraModeButtonTextAppearance">
+            @style/MapboxCameraModeButtonTextAppearance
+        </item>
+        <item name="cameraModeButtonFollowText">@string/mapbox_route_follow</item>
+        <item name="cameraModeButtonOverviewText">@string/mapbox_route_overview</item>
+    </style>
+    <style name="MapboxStyleCameraModeButton.Circle" parent="MapboxStyleCameraModeButton.Square">
+        <item name="cameraModeButtonBackground">@drawable/mapbox_bg_circle_outline</item>
+    </style>
+    <style name="MapboxStyleCameraModeButton.Oval" parent="MapboxStyleCameraModeButton">
+        <item name="cameraModeButtonBackground">@drawable/mapbox_bg_circle_outline</item>
+    </style>
+    <style name="MapboxStyleCameraModeButton.Square" parent="MapboxStyleCameraModeButton">
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:minHeight">0dp</item>
+    </style>
+    <style name="MapboxStyleDistanceRemaining" parent="TextAppearance.AppCompat">
+    <item name="android:textSize">14sp</item>
+    <item name="android:gravity">center_vertical</item>
+    <item name="android:includeFontPadding">false</item>
+    <item name="android:textColor">@color/colorOnSurface</item>
+  </style>
+    <style name="MapboxStyleEstimatedArrivalTime" parent="TextAppearance.AppCompat">
+    <item name="android:textSize">16sp</item>
+    <item name="android:gravity">center_vertical</item>
+    <item name="android:includeFontPadding">false</item>
+    <item name="android:textColor">@color/colorOnSurface</item>
+  </style>
+    <style name="MapboxStyleExitTextForPrimary">
+    <item name="android:textSize">30sp</item>
+    <item name="android:includeFontPadding">false</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textColor">@color/mapbox_exit_text_color</item>
+  </style>
+    <style name="MapboxStyleExitTextForSecondary">
+    <item name="android:textSize">24sp</item>
+    <item name="android:includeFontPadding">false</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textColor">@color/mapbox_exit_text_color</item>
+  </style>
+    <style name="MapboxStyleExitTextForSub">
+    <item name="android:textSize">18sp</item>
+    <item name="android:includeFontPadding">false</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textColor">@color/mapbox_exit_text_color</item>
+  </style>
+    <style name="MapboxStyleExtendableButton">
+        <item name="android:minHeight">@dimen/mapbox_extendableButton_minHeight</item>
+        <item name="android:paddingStart">@dimen/mapbox_extendableButton_paddingStart</item>
+        <item name="android:paddingEnd">@dimen/mapbox_extendableButton_paddingStart</item>
+        <item name="android:elevation">0dp</item>
+        <item name="extendableButtonBackground">@drawable/mapbox_bg_button</item>
+        <item name="extendableButtonIconTint">@color/colorOnSurface</item>
+        <item name="extendableButtonTextAppearance">@style/MapboxExtendableButtonTextAppearance
+        </item>
+    </style>
+    <style name="MapboxStyleExtendableButton.Circle" parent="MapboxStyleExtendableButton.Square">
+        <item name="extendableButtonBackground">@drawable/mapbox_bg_circle_outline</item>
+    </style>
+    <style name="MapboxStyleExtendableButton.Oval" parent="MapboxStyleExtendableButton">
+        <item name="extendableButtonBackground">@drawable/mapbox_bg_circle_outline</item>
+    </style>
+    <style name="MapboxStyleExtendableButton.Square" parent="MapboxStyleExtendableButton">
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:minHeight">0dp</item>
+    </style>
+    <style name="MapboxStyleManeuverView">
+    <item name="maneuverViewBackgroundColor">@color/mapbox_main_maneuver_background_color</item>
+    <item name="subManeuverViewBackgroundColor">@color/mapbox_sub_maneuver_background_color</item>
+    <item name="upcomingManeuverViewBackgroundColor">@color/mapbox_upcoming_maneuver_background_color</item>
+    <item name="maneuverViewIconStyle">@style/MapboxStyleTurnIconManeuver</item>
+    <item name="upcomingManeuverListIconStyle">@style/MapboxStyleTurnIconManeuver</item>
+    <item name="laneGuidanceManeuverIconStyle">@style/MapboxStyleTurnIconManeuver</item>
+  </style>
+    <style name="MapboxStyleNotificationText" parent="android:TextAppearance.StatusBar.EventContent"/>
+    <style name="MapboxStyleNotificationTitle" parent="android:TextAppearance.StatusBar.EventContent">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="MapboxStylePrimaryManeuver">
+    <item name="android:textColor">@color/mapbox_primary_maneuver_text_color</item>
+    <item name="android:textSize">30sp</item>
+    <item name="android:includeFontPadding">false</item>
+    <item name="android:textDirection">locale</item>
+    <item name="android:ellipsize">end</item>
+  </style>
+    <style name="MapboxStyleRecenter">
+        <item name="recenterButtonDrawable">@drawable/mapbox_ic_recenter</item>
+    </style>
+    <style name="MapboxStyleRecenterButton" parent="MapboxStyleExtendableButton">
+        <item name="extendableButtonIcon">@drawable/mapbox_ic_camera_recenter</item>
+    </style>
+    <style name="MapboxStyleRecenterButton.Circle" parent="MapboxStyleRecenterButton.Square">
+        <item name="extendableButtonBackground">@drawable/mapbox_bg_circle_outline</item>
+    </style>
+    <style name="MapboxStyleRecenterButton.Oval" parent="MapboxStyleRecenterButton">
+        <item name="extendableButtonBackground">@drawable/mapbox_bg_circle_outline</item>
+    </style>
+    <style name="MapboxStyleRecenterButton.Square" parent="MapboxStyleRecenterButton">
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:minHeight">0dp</item>
+    </style>
+    <style name="MapboxStyleRoadNameView">
+        <item name="android:textAppearance">@style/MapboxRoadNameViewTextAppearance</item>
+        <item name="android:background">@drawable/mapbox_road_name_view_background</item>
+    </style>
+    <style name="MapboxStyleRouteOverview">
+        <item name="overviewButtonDrawable">@drawable/mapbox_ic_route_overview</item>
+    </style>
+    <style name="MapboxStyleSecondaryManeuver">
+    <item name="android:textColor">@color/mapbox_secondary_maneuver_text_color</item>
+    <item name="android:textSize">24sp</item>
+    <item name="android:includeFontPadding">false</item>
+    <item name="android:textDirection">locale</item>
+    <item name="android:ellipsize">end</item>
+  </style>
+    <style name="MapboxStyleSound">
+        <item name="soundButtonMuteDrawable">@drawable/mapbox_ic_sound_off</item>
+        <item name="soundButtonUnmuteDrawable">@drawable/mapbox_ic_sound_on</item>
+    </style>
+    <style name="MapboxStyleSpeedLimit">
+        <item name="speedLimitTextColor">@color/mapbox_speed_limit_text_color</item>
+        <item name="speedLimitMutcdBorderColor">@color/mapbox_speed_limit_view_mutcd_border</item>
+        <item name="speedLimitBackgroundColor">@color/mapbox_speed_limit_view_background</item>
+        <item name="speedLimitViennaBorderColor">@color/mapbox_speed_limit_view_vienna_border</item>
+    </style>
+    <style name="MapboxStyleStatusView">
+        <item name="android:elevation">4dp</item>
+        <item name="android:background">@drawable/mapbox_bg_rounded</item>
+        <item name="statusViewShowAnimator">@android:animator/fade_in</item>
+        <item name="statusViewHideAnimator">@android:animator/fade_out</item>
+        <item name="statusViewProgressBarDrawable">@null</item>
+        <item name="statusViewProgressBarTint">@color/mapbox_status_view_foreground</item>
+        <item name="statusViewIconTint">@color/mapbox_status_view_foreground</item>
+        <item name="statusViewTextAppearance">@style/MapboxStyleStatusView.TextAppearance</item>
+    </style>
+    <style name="MapboxStyleStatusView.TextAppearance">
+        <item name="android:textColor">@color/mapbox_status_view_foreground</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="MapboxStyleStepDistance">
+    <item name="android:textColor">@color/mapbox_step_distance_text_color</item>
+    <item name="android:textSize">22sp</item>
+    <item name="android:includeFontPadding">false</item>
+  </style>
+    <style name="MapboxStyleSubManeuver">
+    <item name="android:textColor">@color/mapbox_sub_maneuver_text_color</item>
+    <item name="android:textSize">18sp</item>
+    <item name="android:includeFontPadding">false</item>
+    <item name="android:textDirection">locale</item>
+    <item name="android:ellipsize">end</item>
+  </style>
+    <style name="MapboxStyleTimeRemaining" parent="TextAppearance.AppCompat">
+    <item name="android:textSize">14sp</item>
+    <item name="android:gravity">start|left|center_vertical</item>
+    <item name="android:includeFontPadding">false</item>
+    <item name="android:textColor">@color/colorSecondaryVariant</item>
+  </style>
+    <style name="MapboxStyleTripProgressView">
+    <item name="tripProgressTextColor">@color/mapbox_trip_progress_text_color</item>
+    <item name="tripProgressDividerColor">@color/mapbox_trip_progress_divider_color</item>
+    <item name="tripProgressViewBackgroundColor">@color/mapbox_trip_progress_view_background_color</item>
+
+    <item name="timeRemainingTextAppearance">@style/MapboxStyleTimeRemaining</item>
+    <item name="distanceRemainingTextAppearance">@style/MapboxStyleDistanceRemaining</item>
+    <item name="estimatedArrivalTimeTextAppearance">@style/MapboxStyleEstimatedArrivalTime</item>
+    <item name="distanceRemainingIcon">@drawable/mapbox_ic_pin</item>
+    <item name="estimatedArrivalTimeIcon">@drawable/mapbox_ic_time</item>
+  </style>
+    <style name="MapboxStyleTurnIconManeuver">
+    <item name="maneuverTurnIconColor">@color/mapbox_turn_icon_color</item>
+    <item name="maneuverTurnIconShadowColor">@color/mapbox_turn_icon_shadow_color</item>
+  </style>
     <style name="MaterialAlertDialog.Material3" parent="MaterialAlertDialog.MaterialComponents">
     <item name="enforceMaterialTheme">true</item>
     <item name="android:layout">@layout/m3_alert_dialog</item>
@@ -11546,6 +12095,172 @@
         
         <attr name="android:dropDownHorizontalOffset"/>
     </declare-styleable>
+    <declare-styleable name="MapboxAudioGuidanceButton">
+        
+        <attr format="reference|color" name="audioGuidanceButtonBackground"/>
+        
+        <attr format="reference|color" name="audioGuidanceButtonIconTint"/>
+        
+        <attr format="reference" name="audioGuidanceButtonMuteIcon"/>
+        
+        <attr format="reference" name="audioGuidanceButtonUnmuteIcon"/>
+        
+        <attr format="reference" name="audioGuidanceButtonTextAppearance"/>
+        
+        <attr format="string" localization="suggested" name="audioGuidanceButtonMuteText"/>
+        
+        <attr format="string" localization="suggested" name="audioGuidanceButtonUnmuteText"/>
+    </declare-styleable>
+    <declare-styleable name="MapboxCameraModeButton">
+        
+        <attr format="reference|color" name="cameraModeButtonBackground"/>
+        
+        <attr format="reference|color" name="cameraModeButtonIconTint"/>
+        
+        <attr format="reference" name="cameraModeButtonFollowIcon"/>
+        
+        <attr format="reference" name="cameraModeButtonOverviewIcon"/>
+        
+        <attr format="reference" name="cameraModeButtonTextAppearance"/>
+        
+        <attr format="string" localization="suggested" name="cameraModeButtonOverviewText"/>
+        
+        <attr format="string" localization="suggested" name="cameraModeButtonFollowText"/>
+    </declare-styleable>
+    <declare-styleable name="MapboxExtendableButton">
+        
+        <attr format="reference|color" name="extendableButtonBackground"/>
+        
+        <attr format="reference" name="extendableButtonIcon"/>
+        
+        <attr format="reference|color" name="extendableButtonIconTint"/>
+        
+        <attr format="reference" name="extendableButtonTextAppearance"/>
+    </declare-styleable>
+    <declare-styleable name="MapboxManeuverView">
+    
+    <attr format="reference|color" name="maneuverViewBackgroundColor"/>
+    
+    <attr format="reference|color" name="subManeuverViewBackgroundColor"/>
+    
+    <attr format="reference|color" name="upcomingManeuverViewBackgroundColor"/>
+    
+    <attr format="reference" name="maneuverViewIconStyle"/>
+    
+    <attr format="reference" name="upcomingManeuverListIconStyle"/>
+    
+    <attr format="reference" name="laneGuidanceManeuverIconStyle"/>
+  </declare-styleable>
+    <declare-styleable name="MapboxRecenterButton">
+        
+        <attr format="reference" name="recenterButtonDrawable"/>
+        
+        <attr format="reference|color" name="recenterButtonBackground"/>
+        
+        <attr format="color" name="recenterButtonTextColor"/>
+    </declare-styleable>
+    <declare-styleable name="MapboxRouteOverviewButton">
+        
+        <attr format="reference" name="overviewButtonDrawable"/>
+        
+        <attr format="reference|color" name="overviewButtonBackground"/>
+        
+        <attr format="color" name="overviewButtonTextColor"/>
+    </declare-styleable>
+    <declare-styleable name="MapboxSdkButtonWithIcon">
+        <attr format="integer" name="iconSrc"/>
+        <attr format="color" name="drawableTintCompat"/>
+    </declare-styleable>
+    <declare-styleable name="MapboxSearchSdkTheme">
+        
+        <attr format="color" name="mapboxSearchSdkPrimaryTextColor"/>
+        
+        <attr format="color" name="mapboxSearchSdkPrimaryTextInactiveColor"/>
+        
+        <attr format="color" name="mapboxSearchSdkPrimaryAccentColor"/>
+        
+        <attr format="color" name="mapboxSearchSdkOnPrimaryAccentColor"/>
+        
+        <attr format="color" name="mapboxSearchSdkDistanceColor"/>
+        
+        <attr format="color" name="mapboxSearchSdkIconTintColor"/>
+        
+        <attr format="color" name="mapboxSearchSdkBackgroundColor"/>
+        
+        <attr format="color" name="mapboxSearchSdkBackgroundSecondaryColor"/>
+        
+        <attr format="color" name="mapboxSearchSdkPopulateArrowColor"/>
+        
+        <attr format="color" name="mapboxSearchSdkProgressColor"/>
+        
+        <attr format="color" name="mapboxSearchSdkErrorIconColor"/>
+    </declare-styleable>
+    <declare-styleable name="MapboxSearchSdkThemeEntryPoint">
+        
+        <attr format="reference" name="mapboxSearchSdkTheme"/>
+    </declare-styleable>
+    <declare-styleable name="MapboxSoundButton">
+        
+        <attr format="reference" name="soundButtonMuteDrawable"/>
+        
+        <attr format="reference" name="soundButtonUnmuteDrawable"/>
+        
+        <attr format="reference|color" name="soundButtonBackground"/>
+        
+        <attr format="color" name="soundButtonTextColor"/>
+    </declare-styleable>
+    <declare-styleable name="MapboxSpeedLimitView">
+        <attr format="reference|color" name="speedLimitMutcdBorderColor"/>
+        <attr format="reference|color" name="speedLimitBackgroundColor"/>
+        <attr format="reference|color" name="speedLimitViennaBorderColor"/>
+        <attr format="reference|color" name="speedLimitTextColor"/>
+    </declare-styleable>
+    <declare-styleable name="MapboxStatusView">
+        
+        <attr format="reference" name="statusViewShowAnimator"/>
+        
+        <attr format="reference" name="statusViewHideAnimator"/>
+
+        
+        <attr format="reference" name="statusViewProgressBarDrawable"/>
+        
+        <attr format="reference|color" name="statusViewProgressBarTint"/>
+
+        
+        <attr format="reference|color" name="statusViewIconTint"/>
+
+        
+        <attr format="reference" name="statusViewTextAppearance"/>
+    </declare-styleable>
+    <declare-styleable name="MapboxTripProgressView">
+    
+    <attr format="color" name="tripProgressTextColor"/>
+    
+    <attr format="color" name="tripProgressDividerColor"/>
+
+    
+    <attr format="color" name="tripProgressViewBackgroundColor"/>
+    
+    <attr format="reference" name="timeRemainingTextAppearance"/>
+    
+    <attr format="reference" name="distanceRemainingTextAppearance"/>
+    
+    <attr format="reference" name="estimatedArrivalTimeTextAppearance"/>
+    
+    <attr format="reference" name="distanceRemainingIcon"/>
+    
+    <attr format="reference" name="estimatedArrivalTimeIcon"/>
+    
+    <attr format="reference|color" name="distanceRemainingIconTint"/>
+    
+    <attr format="reference|color" name="estimatedArrivalTimeIconTint"/>
+  </declare-styleable>
+    <declare-styleable name="MapboxTurnIconManeuver">
+    
+    <attr format="reference|color" name="maneuverTurnIconColor"/>
+    
+    <attr format="reference|color" name="maneuverTurnIconShadowColor"/>
+  </declare-styleable>
     <declare-styleable name="MaterialAlertDialog">
     <attr format="dimension" name="backgroundInsetStart"/>
     <attr format="dimension" name="backgroundInsetTop"/>
@@ -12356,6 +13071,7 @@
         <attr format="reference" name="fastScrollHorizontalThumbDrawable"/>
         <attr format="reference" name="fastScrollHorizontalTrackDrawable"/>
     </declare-styleable>
+    <declare-styleable name="SVGImageView"><attr format="reference|string" name="svg"/><attr format="string" name="css"/></declare-styleable>
     <declare-styleable name="ScrimInsetsFrameLayout">
     <attr format="color|reference" name="insetForeground"/>
   </declare-styleable>
@@ -12389,6 +13105,10 @@
     
     <attr name="strokeWidth"/>
   </declare-styleable>
+    <declare-styleable name="SearchSdkFrameLayout">
+        
+        <attr format="dimension" name="maxWidth"/>
+    </declare-styleable>
     <declare-styleable name="SearchView"><attr format="reference" name="layout"/><attr format="boolean" name="iconifiedByDefault"/><attr name="android:maxWidth"/><attr format="string" name="queryHint"/><attr format="string" name="defaultQueryHint"/><attr name="android:imeOptions"/><attr name="android:inputType"/><attr format="reference" name="closeIcon"/><attr format="reference" name="goIcon"/><attr format="reference" name="searchIcon"/><attr format="reference" name="searchHintIcon"/><attr format="reference" name="voiceIcon"/><attr format="reference" name="commitIcon"/><attr format="reference" name="suggestionRowLayout"/><attr format="reference" name="queryBackground"/><attr format="reference" name="submitBackground"/><attr name="android:focusable"/><attr name="android:textAppearance"/><attr name="android:text"/><attr name="android:hint"/><attr format="string" name="searchPrefixText"/><attr format="boolean" name="useDrawerArrowDrawable"/><attr format="boolean" name="animateNavigationIcon"/><attr format="boolean" name="animateMenuItems"/><attr name="hideNavigationIcon"/><attr format="boolean" name="autoShowKeyboard"/><attr name="headerLayout"/></declare-styleable>
     <declare-styleable name="ShapeAppearance">
     

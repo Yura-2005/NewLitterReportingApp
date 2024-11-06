@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Mapbox</string>
-    <string name="mapbox_access_token">pk.eyJ1IjoicGF0cnVueXVyYSIsImEiOiJjbTJ2eDl6cmEwMG9jMmlyMmYwNW9teXVrIn0.Ujh7lRUdkG4Q_f4EiUiY6g</string>
+    <string name="mapbox_access_token">sk.eyJ1Ijoic2FzaGEyMDA1IiwiYSI6ImNtMzM3eDNtYTE5NjIyanM4N29leWdoZ3gifQ.ApBvTqYTRfeELaHYP3C5ew</string>
     <string name="focus_location">Зосередитися на моїй локації</string>
 </resources>
