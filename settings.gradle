@@ -10,6 +10,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+
         maven {
             url 'https://api.mapbox.com/downloads/v2/releases/maven'
             authentication {
@@ -26,5 +27,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Mapbox"
+rootProject.name = "Mapbox Navigation"
 include ':app'
