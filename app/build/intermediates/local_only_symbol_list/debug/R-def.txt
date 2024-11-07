@@ -7,9 +7,17 @@ drawable baseline_my_location_24
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable location_pin
+id addMarkerBtn
 id annotation
 id focusLocation
+id maneuverView
 id mapView
+id searchET
+id searchLayout
+id search_results_view
+id selectMarkerBtn
+id setRoute
+id soundButton
 layout activity_main
 layout test_layout
 mipmap ic_launcher

@@ -1,0 +1,43 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.mapbox.app-mergeDebugResources-57:/values-es-rES/values-es-rES.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\v\\.gradle\\caches\\8.9\\transforms\\efede2f18f350ecfd1cfc93a9671ec56\\transformed\\ui-maps-2.17.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "100",
+                        "endColumns": "94",
+                        "endOffsets": "190"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "184",
+                        "endColumns": "94",
+                        "endOffsets": "274"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\v\\.gradle\\caches\\8.9\\transforms\\4a562644d0276cdfaeabc5585d6c5fc2\\transformed\\base-2.17.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "83",
+                        "endOffsets": "134"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "100",
+                        "endColumns": "83",
+                        "endOffsets": "179"
+                    }
+                }
+            ]
+        }
+    ]
+}
