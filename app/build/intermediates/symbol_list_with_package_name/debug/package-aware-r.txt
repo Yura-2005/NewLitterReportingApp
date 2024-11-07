@@ -3834,6 +3834,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addMarkerBtn
 id alertTitle
 id aligned
 id all
@@ -4237,6 +4238,7 @@ id search_view_toolbar
 id search_view_toolbar_container
 id search_voice_btn
 id secondaryManeuverText
+id selectMarkerBtn
 id select_dialog_listview
 id selected
 id selection_type
