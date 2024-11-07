@@ -8,6 +8,10 @@ import static com.mapbox.maps.plugin.gestures.GesturesUtils.getGestures;
 import static com.mapbox.maps.plugin.locationcomponent.LocationComponentUtils.getLocationComponent;
 import static com.mapbox.navigation.base.extensions.RouteOptionsExtensions.applyDefaultNavigationOptions;
 
+import android.widget.Button;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.pm.PackageManager;
@@ -23,6 +27,10 @@ import android.widget.EditText;
 import android.widget.Toast;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import com.example.mapbox.R;
+import java.util.ArrayList;
+
+
 
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
@@ -134,6 +142,7 @@ public class MainActivity extends AppCompatActivity {
     private MapboxRouteLineView routeLineView;
     private MapboxRouteLineApi routeLineApi;
     private AppDatabase appDatabase; // Ініціалізація бази даних
+    private boolean isAddMarkerMode = false;
 
 
     private final LocationObserver locationObserver = new LocationObserver() {
@@ -319,6 +328,24 @@ public class MainActivity extends AppCompatActivity {
 
         placeAutocompleteUiAdapter = new PlaceAutocompleteUiAdapter(searchResultsView, placeAutocomplete, LocationEngineProvider.getBestLocationEngine(MainActivity.this));
 
+        Button selectMarkerBtn = findViewById(R.id.selectMarkerBtn);
+        selectMarkerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showMarkerSelectionDialog();
+            }
+        });
+
+
+        Button addMarkerBtn = findViewById(R.id.addMarkerBtn);
+        addMarkerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                isAddMarkerMode = true; // Режим додавання міток
+                Toast.makeText(MainActivity.this, "Виберіть точку на карті для додавання мітки", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         searchET.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -393,11 +420,11 @@ public class MainActivity extends AppCompatActivity {
         setRoute.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Please select a location in map", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Please select a location on the map", Toast.LENGTH_SHORT).show();
             }
         });
 
-        mapView.getMapboxMap().loadStyleUri(Style.SATELLITE, new Style.OnStyleLoaded() {
+        mapView.getMapboxMap().loadStyleUri(Style.MAPBOX_STREETS, new Style.OnStyleLoaded() {
             @Override
             public void onStyleLoaded(@NonNull Style style) {
                 mapView.getMapboxMap().setCamera(new CameraOptions.Builder().zoom(20.0).build());
@@ -412,26 +439,40 @@ public class MainActivity extends AppCompatActivity {
                         return null;
                     }
                 });
+
                 Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.location_pin);
                 AnnotationPlugin annotationPlugin = AnnotationPluginImplKt.getAnnotations(mapView);
                 PointAnnotationManager pointAnnotationManager = PointAnnotationManagerKt.createPointAnnotationManager(annotationPlugin, mapView);
+
+
+
                 addOnMapClickListener(mapView.getMapboxMap(), new OnMapClickListener() {
                     @Override
                     public boolean onMapClick(@NonNull Point point) {
-                        pointAnnotationManager.deleteAll();
-                        PointAnnotationOptions pointAnnotationOptions = new PointAnnotationOptions().withTextAnchor(TextAnchor.CENTER).withIconImage(bitmap)
-                                .withPoint(point);
-                        pointAnnotationManager.create(pointAnnotationOptions);
+                        // Перевірка, чи активований режим додавання мітки
+                        if (isAddMarkerMode) {
+                            // Створення та додавання мітки
+                            PointAnnotationOptions pointAnnotationOptions = new PointAnnotationOptions()
+                                    .withTextAnchor(TextAnchor.CENTER)
+                                    .withIconImage(bitmap) // Замініть "bitmap" на ваш образ мітки
+                                    .withPoint(point);
 
-                        setRoute.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                fetchRoute(point);
-                            }
-                        });
+                            // Створіть PointAnnotationManager, якщо його ще немає
+//                            PointAnnotationManager pointAnnotationManager = mapView.getAnnotationPlugin().createPointAnnotationManager(mapView);
+                            pointAnnotationManager.create(pointAnnotationOptions);
+
+                            // Викликаємо діалог для введення тексту
+                            showInputDialog(point);
+
+                            // Вимикаємо режим додавання мітки
+                            isAddMarkerMode = false;
+                            Toast.makeText(MainActivity.this, "Режим додавання мітки вимкнено", Toast.LENGTH_SHORT).show();
+                        }
+                        
                         return true;
                     }
                 });
+
                 focusLocationBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -478,10 +519,111 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 });
+
                 loadAnnotations();
             }
         });
+
     }
+
+    private void showInputDialog(Point point) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Add text to marker");
+
+        final EditText input = new EditText(this);
+        builder.setView(input);
+
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                String markerText = input.getText().toString();
+                // Зберігаємо текст мітки в базі даних або використовуємо його для подальших дій
+                addTextToMarker(point, markerText);
+            }
+        });
+
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        builder.show();
+    }
+
+    private void addTextToMarker(Point point, String text) {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.location_pin); // Ваше зображення мітки
+        if (bitmap != null) {
+            PointAnnotationOptions pointAnnotationOptions = new PointAnnotationOptions()
+                    .withTextField(text) // Додаємо текст
+                    .withTextAnchor(TextAnchor.CENTER)
+                    .withIconImage(bitmap)
+                    .withPoint(point);
+
+            // Додаємо мітку на карту
+            PointAnnotationManager pointAnnotationManager = PointAnnotationManagerKt.createPointAnnotationManager(
+                    AnnotationPluginImplKt.getAnnotations(mapView), mapView);
+            pointAnnotationManager.create(pointAnnotationOptions);
+
+            // Зберігаємо координати та текст у базу даних
+            appDatabase.insertData(point.latitude(), point.longitude(), text);
+
+        } else {
+            Log.e("Bitmap Error", "Bitmap for location pin is null");
+        }
+    }
+
+    private void showMarkerSelectionDialog() {
+        Cursor cursor = appDatabase.getData();
+        List<String> markers = new ArrayList<>();
+        List<Point> points = new ArrayList<>();
+
+        if (cursor != null) {
+            int latitudeIndex = cursor.getColumnIndex(AppDatabase.COLUMN_LATITUDE);
+            int longitudeIndex = cursor.getColumnIndex(AppDatabase.COLUMN_LONGITUDE);
+            int textIndex = cursor.getColumnIndex(AppDatabase.COLUMN_TEXT);
+
+            // Перевірка, чи всі індекси знайдені
+            if (latitudeIndex != -1 && longitudeIndex != -1 && textIndex != -1) {
+                while (cursor.moveToNext()) {
+                    double latitude = cursor.getDouble(latitudeIndex);
+                    double longitude = cursor.getDouble(longitudeIndex);
+                    String text = cursor.getString(textIndex);
+
+                    markers.add(text);
+                    points.add(Point.fromLngLat(longitude, latitude));
+                }
+            } else {
+                // Вивести повідомлення про помилку або повідомити, що стовпці не знайдені
+                Log.e("DatabaseError", "Один або декілька стовпців не знайдено в базі даних.");
+            }
+            cursor.close();
+        }
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Виберіть мітку для маршруту");
+
+        String[] markerArray = markers.toArray(new String[0]);
+        builder.setItems(markerArray, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Point selectedPoint = points.get(which);
+                fetchRoute(selectedPoint);
+            }
+        });
+
+        builder.setNegativeButton("Скасувати", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        builder.show();
+    }
+
+
 
     private void loadAnnotations() {
         Cursor cursor = appDatabase.getData(); // Отримуємо курсор з даними з бази даних
@@ -508,7 +650,9 @@ public class MainActivity extends AppCompatActivity {
                                 .withIconImage(bitmap)
                                 .withPoint(point);
 
-
+                        PointAnnotationManager pointAnnotationManager = PointAnnotationManagerKt.createPointAnnotationManager(
+                                AnnotationPluginImplKt.getAnnotations(mapView), mapView);
+                        pointAnnotationManager.create(pointAnnotationOptions);
                     } else {
                         Log.e("Bitmap Error", "Bitmap for location pin is null");
                     }
@@ -518,44 +662,6 @@ public class MainActivity extends AppCompatActivity {
             }
             cursor.close(); // Закриваємо курсор
         }
-    }
-
-
-
-    private void showInputDialog(Point point) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Введіть текст для мітки");
-
-        final EditText input = new EditText(this);
-        builder.setView(input);
-
-        builder.setPositiveButton("Додати", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                String annotationText = input.getText().toString(); // Отримання тексту
-                Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.location_pin); // Ваше зображення мітки
-
-                PointAnnotationOptions pointAnnotationOptions = new PointAnnotationOptions()
-                        .withTextField(annotationText) // Додаємо текст
-                        .withTextAnchor(TextAnchor.CENTER)
-                        .withIconImage(bitmap)
-                        .withPoint(point);
-
-
-
-                // Збереження координат та тексту в базу даних
-                appDatabase.insertData(point.latitude(), point.longitude(), annotationText);
-            }
-        });
-
-        builder.setNegativeButton("Скасувати", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
-            }
-        });
-
-        builder.show();
     }
 
     @SuppressLint("MissingPermission")
@@ -613,17 +719,3 @@ public class MainActivity extends AppCompatActivity {
         mapboxNavigation.unregisterLocationObserver(locationObserver);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

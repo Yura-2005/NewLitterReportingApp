@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mapbox.app-mergeDebugResources-2:/values-id/values-id.xml",
+            "outputFile": "com.example.mapbox.app-mergeDebugResources-57:/values-id/values-id.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\4a562644d0276cdfaeabc5585d6c5fc2\\transformed\\base-2.17.1\\res\\values-id\\values-id.xml",
+                    "source": "C:\\Users\\v\\.gradle\\caches\\8.9\\transforms\\4a562644d0276cdfaeabc5585d6c5fc2\\transformed\\base-2.17.1\\res\\values-id\\values-id.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\7e06131b901feda726e9f3bb3399cfe3\\transformed\\ui-voice-2.17.1\\res\\values-id\\values-id.xml",
+                    "source": "C:\\Users\\v\\.gradle\\caches\\8.9\\transforms\\7e06131b901feda726e9f3bb3399cfe3\\transformed\\ui-voice-2.17.1\\res\\values-id\\values-id.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

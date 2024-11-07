@@ -58,15 +58,7 @@
         android:layout_below="@id/searchLayout" />
 
     <!-- Кнопка для встановлення маршруту -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/setRoute"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10sp"
-        android:layout_marginEnd="10sp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20sp"
-        android:text="Set Route" />
+
 
     <com.mapbox.navigation.ui.voice.view.MapboxSoundButton
         android:layout_width="wrap_content"
@@ -88,7 +80,38 @@
         android:src="@drawable/baseline_my_location_24"
         android:contentDescription="@string/focus_location" />
 
+    <!-- Horizontal layout for buttons at the bottom -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/selectMarkerBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Вибрати мітку"
+            android:layout_marginEnd="16dp" />
+
+        <Button
+            android:id="@+id/addMarkerBtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="+"
+            android:layout_marginEnd="16dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/setRoute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20sp"
+            android:text="Set Route" />
+    </LinearLayout>
+
 </RelativeLayout>
-
-
-
