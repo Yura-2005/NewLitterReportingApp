@@ -143,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
     private MapboxRouteLineApi routeLineApi;
     private AppDatabase appDatabase; // Ініціалізація бази даних
     private boolean isAddMarkerMode = false;
+    private boolean isSetRouteMode = false;
 
 
     private final LocationObserver locationObserver = new LocationObserver() {
@@ -420,6 +421,7 @@ public class MainActivity extends AppCompatActivity {
         setRoute.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                isSetRouteMode = true;
                 Toast.makeText(MainActivity.this, "Please select a location on the map", Toast.LENGTH_SHORT).show();
             }
         });
@@ -449,7 +451,13 @@ public class MainActivity extends AppCompatActivity {
                 addOnMapClickListener(mapView.getMapboxMap(), new OnMapClickListener() {
                     @Override
                     public boolean onMapClick(@NonNull Point point) {
-                        // Перевірка, чи активований режим додавання мітки
+                        if (isSetRouteMode) {
+                            fetchRoute(point);
+                            Toast.makeText(MainActivity.this, "Маршрут встановлено", Toast.LENGTH_SHORT).show();
+                            isSetRouteMode = false;
+                        } else {
+                            Toast.makeText(MainActivity.this, "Увімкніть режим встановлення маршруту", Toast.LENGTH_SHORT).show();
+                        }
                         if (isAddMarkerMode) {
                             // Створення та додавання мітки
                             PointAnnotationOptions pointAnnotationOptions = new PointAnnotationOptions()
@@ -468,10 +476,11 @@ public class MainActivity extends AppCompatActivity {
                             isAddMarkerMode = false;
                             Toast.makeText(MainActivity.this, "Режим додавання мітки вимкнено", Toast.LENGTH_SHORT).show();
                         }
-                        
+
                         return true;
                     }
                 });
+
 
                 focusLocationBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -687,13 +696,13 @@ public class MainActivity extends AppCompatActivity {
                         mapboxNavigation.setNavigationRoutes(list);
                         focusLocationBtn.performClick();
                         setRoute.setEnabled(true);
-                        setRoute.setText("Set route");
+                        setRoute.setText("Встановити маршрут");
                     }
 
                     @Override
                     public void onFailure(@NonNull List<RouterFailure> list, @NonNull RouteOptions routeOptions) {
                         setRoute.setEnabled(true);
-                        setRoute.setText("Set route");
+                        setRoute.setText("Встановити маршрут");
                         Toast.makeText(MainActivity.this, "Route request failed", Toast.LENGTH_SHORT).show();
                     }
 
@@ -710,6 +719,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
 
     @Override
     protected void onDestroy() {
