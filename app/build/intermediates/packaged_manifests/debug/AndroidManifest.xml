@@ -56,6 +56,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.mapbox.UserProfileActivity"
+            android:exported="false"
+            android:label="User Profile"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Mapbox" >
+
+            <!-- додаткові атрибути, якщо є -->
+        </activity>
+        <activity
+            android:name="com.example.mapbox.EditProfileActivity"
+            android:exported="false"
+            android:label="Edit Profile"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Mapbox" >
+
+            <!-- додаткові атрибути, якщо є -->
+        </activity>
 
         <provider
             android:name="androidx.startup.InitializationProvider"
