@@ -16,15 +16,34 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mapbox"
         tools:targetApi="31">
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".UserProfileActivity"
+            android:label="User Profile"
+            android:theme="@style/Theme.Mapbox"
+            android:screenOrientation="portrait"
+            android:exported="false">
+            <!-- додаткові атрибути, якщо є -->
+        </activity>
+
+        <activity
+            android:name=".EditProfileActivity"
+            android:label="Edit Profile"
+            android:theme="@style/Theme.Mapbox"
+            android:screenOrientation="portrait"
+            android:exported="false">
+            <!-- додаткові атрибути, якщо є -->
+        </activity>
+
     </application>
 
 </manifest>

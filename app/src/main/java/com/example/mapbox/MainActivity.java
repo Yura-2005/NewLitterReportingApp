@@ -8,6 +8,13 @@ import static com.mapbox.maps.plugin.gestures.GesturesUtils.getGestures;
 import static com.mapbox.maps.plugin.locationcomponent.LocationComponentUtils.getLocationComponent;
 import static com.mapbox.navigation.base.extensions.RouteOptionsExtensions.applyDefaultNavigationOptions;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.widget.Button;
 import android.os.Bundle;
 import android.view.View;
@@ -144,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
     private AppDatabase appDatabase; // Ініціалізація бази даних
     private boolean isAddMarkerMode = false;
     private boolean isSetRouteMode = false;
-
+    private Button userProfileButton;
 
     private final LocationObserver locationObserver = new LocationObserver() {
         @Override
@@ -290,6 +297,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         // Ініціалізація бази даних
         appDatabase = AppDatabase.getInstance(this);
 
@@ -329,6 +337,13 @@ public class MainActivity extends AppCompatActivity {
 
         placeAutocompleteUiAdapter = new PlaceAutocompleteUiAdapter(searchResultsView, placeAutocomplete, LocationEngineProvider.getBestLocationEngine(MainActivity.this));
 
+
+        userProfileButton = findViewById(R.id.userProfileButton);
+
+        userProfileButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, UserProfileActivity.class);
+            startActivity(intent);
+        });
         Button selectMarkerBtn = findViewById(R.id.selectMarkerBtn);
         selectMarkerBtn.setOnClickListener(new View.OnClickListener() {
             @Override

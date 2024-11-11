@@ -1,90 +1,98 @@
 [
     {
-        "merged": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-merged_res-59:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-main-61:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.mapbox.app-merged_res-4:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mapbox.app-main-6:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-merged_res-59:\\drawable_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-main-61:\\drawable\\ic_launcher_foreground.xml"
+        "merged": "com.example.mapbox.app-merged_res-4:/layout_activity_main.xml.flat",
+        "source": "com.example.mapbox.app-main-6:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-merged_res-59:\\layout_test_layout.xml.flat",
-        "source": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-main-61:\\layout\\test_layout.xml"
+        "merged": "com.example.mapbox.app-merged_res-4:/layout_activity_user_profile.xml.flat",
+        "source": "com.example.mapbox.app-main-6:/layout/activity_user_profile.xml"
     },
     {
-        "merged": "com.example.mapbox.app-merged_res-59:/layout_activity_main.xml.flat",
-        "source": "com.example.mapbox.app-main-61:/layout/activity_main.xml"
+        "merged": "com.example.mapbox.app-merged_res-4:/drawable_baseline_location_on_24.xml.flat",
+        "source": "com.example.mapbox.app-main-6:/drawable/baseline_location_on_24.xml"
     },
     {
-        "merged": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-merged_res-59:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-main-61:\\xml\\backup_rules.xml"
+        "merged": "com.example.mapbox.app-merged_res-4:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.mapbox.app-main-6:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-merged_res-59:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-main-61:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "com.example.mapbox.app-merged_res-4:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.mapbox.app-main-6:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-merged_res-59:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-main-61:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "com.example.mapbox.app-merged_res-4:/layout_activity_edit_profile.xml.flat",
+        "source": "com.example.mapbox.app-main-6:/layout/activity_edit_profile.xml"
     },
     {
-        "merged": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-merged_res-59:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-main-61:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "com.example.mapbox.app-merged_res-4:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mapbox.app-main-6:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-merged_res-59:\\drawable_baseline_location_on_24.xml.flat",
-        "source": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-main-61:\\drawable\\baseline_location_on_24.xml"
+        "merged": "com.example.mapbox.app-merged_res-4:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.mapbox.app-main-6:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-merged_res-59:\\drawable_baseline_my_location_24.xml.flat",
-        "source": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-main-61:\\drawable\\baseline_my_location_24.xml"
+        "merged": "com.example.mapbox.app-merged_res-4:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.mapbox.app-main-6:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-merged_res-59:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-main-61:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.mapbox.app-merged_res-4:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.mapbox.app-main-6:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-merged_res-59:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-main-61:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "com.example.mapbox.app-merged_res-4:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.mapbox.app-main-6:/drawable/ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-merged_res-59:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-main-61:\\drawable\\ic_launcher_background.xml"
+        "merged": "com.example.mapbox.app-merged_res-4:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mapbox.app-main-6:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-merged_res-59:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-main-61:\\xml\\data_extraction_rules.xml"
+        "merged": "com.example.mapbox.app-merged_res-4:/xml_backup_rules.xml.flat",
+        "source": "com.example.mapbox.app-main-6:/xml/backup_rules.xml"
     },
     {
-        "merged": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-merged_res-59:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-main-61:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "com.example.mapbox.app-merged_res-4:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.mapbox.app-main-6:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-merged_res-59:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-main-61:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "com.example.mapbox.app-merged_res-4:/drawable_ic_profile_placeholder.png.flat",
+        "source": "com.example.mapbox.app-main-6:/drawable/ic_profile_placeholder.png"
     },
     {
-        "merged": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-merged_res-59:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-main-61:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "com.example.mapbox.app-merged_res-4:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mapbox.app-main-6:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-merged_res-59:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-main-61:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "com.example.mapbox.app-merged_res-4:/drawable_baseline_my_location_24.xml.flat",
+        "source": "com.example.mapbox.app-main-6:/drawable/baseline_my_location_24.xml"
     },
     {
-        "merged": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-merged_res-59:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-main-61:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.mapbox.app-merged_res-4:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.mapbox.app-main-6:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-merged_res-59:\\drawable_location_pin.png.flat",
-        "source": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-main-61:\\drawable\\location_pin.png"
+        "merged": "com.example.mapbox.app-merged_res-4:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mapbox.app-main-6:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-merged_res-59:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-main-61:\\layout\\activity_main.xml"
+        "merged": "com.example.mapbox.app-merged_res-4:/drawable_location_pin.png.flat",
+        "source": "com.example.mapbox.app-main-6:/drawable/location_pin.png"
     },
     {
-        "merged": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-merged_res-59:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\v\\.gradle\\daemon\\8.9\\com.example.mapbox.app-main-61:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "com.example.mapbox.app-merged_res-4:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.mapbox.app-main-6:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.mapbox.app-merged_res-4:/layout_test_layout.xml.flat",
+        "source": "com.example.mapbox.app-main-6:/layout/test_layout.xml"
+    },
+    {
+        "merged": "com.example.mapbox.app-merged_res-4:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.mapbox.app-main-6:/mipmap-anydpi-v26/ic_launcher_round.xml"
     }
 ]
