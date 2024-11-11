@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:2:1-30:12
+ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:2:1-49:12
 MERGED from [com.mapbox.search:mapbox-search-android-ui:1.0.0-rc.6] C:\Users\User\.gradle\caches\8.9\transforms\79a3267e0a284b7632830f20851b508e\transformed\mapbox-search-android-ui-1.0.0-rc.6\AndroidManifest.xml:2:1-9:12
 MERGED from [com.mapbox.navigation:android:2.17.1] C:\Users\User\.gradle\caches\8.9\transforms\3c8c61952d599b2e81aa76924fdf006e\transformed\android-2.17.1\AndroidManifest.xml:2:1-9:12
 MERGED from [com.mapbox.navigation:ui-maps:2.17.1] C:\Users\User\.gradle\caches\8.9\transforms\efede2f18f350ecfd1cfc93a9671ec56\transformed\ui-maps-2.17.1\AndroidManifest.xml:2:1-9:12
@@ -136,8 +136,8 @@ MERGED from [com.mapbox.navigation:core:2.17.1] C:\Users\User\.gradle\caches\8.9
 	android:name
 		ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:7:22-78
 application
-ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:9:5-28:19
-INJECTED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:9:5-28:19
+ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:9:5-47:19
+INJECTED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:9:5-47:19
 MERGED from [com.google.android.material:material:1.9.0] C:\Users\User\.gradle\caches\8.9\transforms\409b840f54bcc496c71b828a54e9b389\transformed\material-1.9.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.9.0] C:\Users\User\.gradle\caches\8.9\transforms\409b840f54bcc496c71b828a54e9b389\transformed\material-1.9.0\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\User\.gradle\caches\8.9\transforms\b5b62b76e27c098e1ea96b8bc2dfd1eb\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -191,21 +191,45 @@ MERGED from [androidx.room:room-runtime:2.2.5] C:\Users\User\.gradle\caches\8.9\
 	android:dataExtractionRules
 		ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:11:9-65
 activity#com.example.mapbox.MainActivity
-ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:19:9-27:20
+ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:20:9-27:20
 	android:exported
-		ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:21:13-36
+		ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:22:13-36
 	android:name
-		ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:20:13-41
+		ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:21:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:22:13-26:29
+ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:23:13-26:29
 action#android.intent.action.MAIN
-ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:23:17-69
+ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:24:17-69
 	android:name
-		ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:23:25-66
+		ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:24:25-66
 category#android.intent.category.LAUNCHER
 ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:25:17-77
 	android:name
 		ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:25:27-74
+activity#com.example.mapbox.UserProfileActivity
+ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:29:9-36:20
+	android:screenOrientation
+		ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:33:13-49
+	android:label
+		ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:31:13-41
+	android:exported
+		ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:34:13-37
+	android:theme
+		ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:32:13-48
+	android:name
+		ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:30:13-48
+activity#com.example.mapbox.EditProfileActivity
+ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:38:9-45:20
+	android:screenOrientation
+		ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:42:13-49
+	android:label
+		ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:40:13-41
+	android:exported
+		ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:43:13-37
+	android:theme
+		ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:41:13-48
+	android:name
+		ADDED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml:39:13-48
 uses-sdk
 INJECTED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\NewLitterReportingApp\app\src\main\AndroidManifest.xml

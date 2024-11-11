@@ -1,4 +1,4 @@
-#Wed Nov 06 11:16:20 EET 2024
+#Mon Nov 11 17:49:24 EET 2024
 base.0=C\:\\NewLitterReportingApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\NewLitterReportingApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\NewLitterReportingApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex

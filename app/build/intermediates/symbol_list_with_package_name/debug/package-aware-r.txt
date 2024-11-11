@@ -3241,6 +3241,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_profile_placeholder
 drawable ic_search_black_24
 drawable location_pin
 drawable m3_appbar_background
@@ -3811,6 +3812,7 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+id achievementsSwitch
 id actionDown
 id actionDownUp
 id actionUp
@@ -3834,6 +3836,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addMarkerBtn
 id alertTitle
 id aligned
 id all
@@ -3947,6 +3950,7 @@ id easeInOut
 id easeOut
 id east
 id edge
+id editProfileButton
 id edit_query
 id elastic
 id embed
@@ -4036,6 +4040,7 @@ id left
 id leftToRight
 id lefttwards
 id legacy
+id levelTextView
 id line1
 id line3
 id linear
@@ -4113,6 +4118,8 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id nameEditText
+id nameTextView
 id navigationCollapsedNotificationLayout
 id navigationExpandedNotificationLayout
 id navigationIsStarting
@@ -4156,6 +4163,7 @@ id pathRelative
 id peekHeight
 id percent
 id pin
+id pointsTextView
 id position
 id postLayout
 id postedSpeedLayoutMutcd
@@ -4166,12 +4174,15 @@ id postedSpeedUnit
 id postedSpeedVienna
 id pressed
 id primaryManeuverText
+id profileImageView
 id progressBar
 id progress_circular
 id progress_horizontal
+id promotionSwitch
 id radio
 id ratio
 id rectangles
+id redeemPointsButton
 id result_icon
 id result_not_items
 id result_populate
@@ -4186,6 +4197,7 @@ id roadNameLabel
 id roadNameShieldIcon
 id rounded
 id row_index_key
+id saveButton
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -4237,6 +4249,7 @@ id search_view_toolbar
 id search_view_toolbar_container
 id search_voice_btn
 id secondaryManeuverText
+id selectMarkerBtn
 id select_dialog_listview
 id selected
 id selection_type
@@ -4340,6 +4353,7 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id trashCountTextView
 id triangle
 id tripProgressContainer
 id unchecked
@@ -4350,6 +4364,7 @@ id up
 id upcomingManeuverRecycler
 id upwards
 id useLogo
+id userProfileButton
 id vertical
 id vertical_only
 id view_offset_helper
@@ -4484,7 +4499,9 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_dummy
+layout activity_edit_profile
 layout activity_main
+layout activity_user_profile
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
