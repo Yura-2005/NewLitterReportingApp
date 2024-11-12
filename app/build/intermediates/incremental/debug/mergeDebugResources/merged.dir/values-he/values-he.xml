@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <plurals name="mapbox_number_of_days" ns1:ignore="MissingTranslation">
+        <item quantity="one">ימים</item>
+        <item quantity="two">ימים</item>
+        <item quantity="many">ימים</item>
+        <item quantity="other">ימים</item>
+    </plurals>
+    <string name="mapbox_end_navigation">סיום ניווט</string>
+    <string name="mapbox_muted">שמע כבוי</string>
+    <string name="mapbox_unit_hr" ns1:ignore="MissingTranslation">שעות</string>
+    <string name="mapbox_unit_kilometers">ק״מ</string>
+    <string name="mapbox_unit_meters">מ׳</string>
+    <string name="mapbox_unit_miles">מייל</string>
+    <string name="mapbox_unit_min" ns1:ignore="MissingTranslation">דק׳</string>
+    <string name="mapbox_unmuted">שמע פועל</string>
+</resources>

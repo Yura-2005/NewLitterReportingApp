@@ -1,0 +1,31 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable baseline_location_on_24
+drawable baseline_my_location_24
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable location_pin
+id addMarkerBtn
+id annotation
+id focusLocation
+id maneuverView
+id mapView
+id searchET
+id searchLayout
+id search_results_view
+id selectMarkerBtn
+id setRoute
+id soundButton
+layout activity_main
+layout test_layout
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string focus_location
+string mapbox_access_token
+style Base.Theme.Mapbox
+style Theme.Mapbox
+xml backup_rules
+xml data_extraction_rules
