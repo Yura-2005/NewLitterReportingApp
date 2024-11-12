@@ -1,10 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mapbox.app-mergeDebugResources-2:/values-yo/values-yo.xml",
+            "outputFile": "com.example.mapbox.app-mergeDebugResources-57:/values-yo/values-yo.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\4a562644d0276cdfaeabc5585d6c5fc2\\transformed\\base-2.17.1\\res\\values-yo\\values-yo.xml",
+                    "source": "/Users/nazarpyrtko/.gradle/caches/8.9/transforms/7e06131b901feda726e9f3bb3399cfe3/transformed/ui-voice-2.17.1/res/values-yo/values-yo.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,102",
+                        "endColumns": "46,50",
+                        "endOffsets": "97,148"
+                    },
+                    "to": {
+                        "startLines": "7,15",
+                        "startColumns": "4,4",
+                        "startOffsets": "381,906",
+                        "endColumns": "46,50",
+                        "endOffsets": "423,952"
+                    }
+                },
+                {
+                    "source": "/Users/nazarpyrtko/.gradle/caches/8.9/transforms/4a562644d0276cdfaeabc5585d6c5fc2/transformed/base-2.17.1/res/values-yo/values-yo.xml",
                     "from": {
                         "startLines": "2,5,6,7,8",
                         "startColumns": "4,4,4,4,4",
@@ -23,7 +40,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\efede2f18f350ecfd1cfc93a9671ec56\\transformed\\ui-maps-2.17.1\\res\\values-yo\\values-yo.xml",
+                    "source": "/Users/nazarpyrtko/.gradle/caches/8.9/transforms/efede2f18f350ecfd1cfc93a9671ec56/transformed/ui-maps-2.17.1/res/values-yo/values-yo.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -40,7 +57,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\54e20bdebf4297f40186b8f5e9b2d30b\\transformed\\utils-2.17.1\\res\\values-yo\\values-yo.xml",
+                    "source": "/Users/nazarpyrtko/.gradle/caches/8.9/transforms/54e20bdebf4297f40186b8f5e9b2d30b/transformed/utils-2.17.1/res/values-yo/values-yo.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -54,23 +71,6 @@
                         "startOffsets": "516,674,728,777",
                         "endColumns": "79,53,48,48",
                         "endOffsets": "591,723,772,821"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\7e06131b901feda726e9f3bb3399cfe3\\transformed\\ui-voice-2.17.1\\res\\values-yo\\values-yo.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,102",
-                        "endColumns": "46,50",
-                        "endOffsets": "97,148"
-                    },
-                    "to": {
-                        "startLines": "7,15",
-                        "startColumns": "4,4",
-                        "startOffsets": "381,906",
-                        "endColumns": "46,50",
-                        "endOffsets": "423,952"
                     }
                 }
             ]

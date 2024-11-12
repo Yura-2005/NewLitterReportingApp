@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mapbox.app-mergeDebugResources-2:/values-es-rES/values-es-rES.xml",
+            "outputFile": "com.example.mapbox.app-mergeDebugResources-57:/values-es-rES/values-es-rES.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\4a562644d0276cdfaeabc5585d6c5fc2\\transformed\\base-2.17.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "source": "/Users/nazarpyrtko/.gradle/caches/8.9/transforms/4a562644d0276cdfaeabc5585d6c5fc2/transformed/base-2.17.1/res/values-es-rES/values-es-rES.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\efede2f18f350ecfd1cfc93a9671ec56\\transformed\\ui-maps-2.17.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "source": "/Users/nazarpyrtko/.gradle/caches/8.9/transforms/efede2f18f350ecfd1cfc93a9671ec56/transformed/ui-maps-2.17.1/res/values-es-rES/values-es-rES.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -480,9 +480,6 @@ public class MainActivity extends AppCompatActivity {
                                     .withIconImage(bitmap) // Замініть "bitmap" на ваш образ мітки
                                     .withPoint(point);
 
-                            // Створіть PointAnnotationManager, якщо його ще немає
-//                            PointAnnotationManager pointAnnotationManager = mapView.getAnnotationPlugin().createPointAnnotationManager(mapView);
-                            pointAnnotationManager.create(pointAnnotationOptions);
 
                             // Викликаємо діалог для введення тексту
                             showInputDialog(point);
@@ -580,7 +577,6 @@ public class MainActivity extends AppCompatActivity {
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.location_pin); // Ваше зображення мітки
         if (bitmap != null) {
             PointAnnotationOptions pointAnnotationOptions = new PointAnnotationOptions()
-                    .withTextField(text) // Додаємо текст
                     .withTextAnchor(TextAnchor.CENTER)
                     .withIconImage(bitmap)
                     .withPoint(point);
@@ -669,7 +665,7 @@ public class MainActivity extends AppCompatActivity {
 
                     if (bitmap != null) { // Переконайтесь, що bitmap завантажений
                         PointAnnotationOptions pointAnnotationOptions = new PointAnnotationOptions()
-                                .withTextField(annotationText)
+//                                .withTextField(annotationText)
                                 .withTextAnchor(TextAnchor.CENTER)
                                 .withIconImage(bitmap)
                                 .withPoint(point);

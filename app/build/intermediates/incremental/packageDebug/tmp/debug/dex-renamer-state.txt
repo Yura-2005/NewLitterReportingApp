@@ -1,10 +1,10 @@
-#Mon Nov 11 18:48:10 EET 2024
-base.0=C\:\\NewLitterReportingApp7777777777\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=C\:\\NewLitterReportingApp7777777777\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=C\:\\NewLitterReportingApp7777777777\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
-base.3=C\:\\NewLitterReportingApp7777777777\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
-base.4=C\:\\NewLitterReportingApp7777777777\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
-base.5=C\:\\NewLitterReportingApp7777777777\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes2.dex
+#Tue Nov 12 11:06:49 EET 2024
+base.0=/Users/nazarpyrtko/Desktop/Універ/3 курс/1 сем/прмд/project/NewLitterReportingApp-main-2/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.1=/Users/nazarpyrtko/Desktop/Універ/3 курс/1 сем/прмд/project/NewLitterReportingApp-main-2/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.2=/Users/nazarpyrtko/Desktop/Універ/3 курс/1 сем/прмд/project/NewLitterReportingApp-main-2/app/build/intermediates/dex/debug/mergeProjectDexDebug/15/classes.dex
+base.3=/Users/nazarpyrtko/Desktop/Універ/3 курс/1 сем/прмд/project/NewLitterReportingApp-main-2/app/build/intermediates/dex/debug/mergeProjectDexDebug/3/classes.dex
+base.4=/Users/nazarpyrtko/Desktop/Універ/3 курс/1 сем/прмд/project/NewLitterReportingApp-main-2/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
+base.5=/Users/nazarpyrtko/Desktop/Універ/3 курс/1 сем/прмд/project/NewLitterReportingApp-main-2/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=15/classes.dex
